@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>測試頁面</title>
+	<script type="text/javascript" src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-1.9.0.min.js"></script>
+	<script>
+
+			$(function () {
+				$.ajax({
+										url: "/productForward",
+										type: "get",
+										contentType:"application/json",
+										success: function (data) {
+											console.log("-qqqqqqqq----------------------------------------");
+											console.log(data);
+											$("#content").html(data);
+										}
+
+									})
+
+			})
+
+		</script>
+
+</head>
+
+<body>
+	<div id = "content"></div>
+</body>
+
+</html>
